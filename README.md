@@ -133,3 +133,7 @@ crane
 如有任何问题或建议，欢迎通过以下方式联系我们：
 
 - 邮箱：tofupi@163.com
+
+努力冲 1K！🚀
+
+![](https://api.star-history.com/svg?repos=togupi163/crane&type=Date)
