@@ -3,9 +3,18 @@
 Crane 是一个面向 DevOps / SRE 场景的本地交互式 AI Agent。它的核心定位不是“通用聊天”，而是把自然语言请求转成可执行的本地运维动作，并把过程、工具输出、权限审批和会话状态可视化。
 
 ## 版本更新
-### 0525 
-- 更新日志：
-  - 修复了在某些环境下权限审批弹窗显示异常的问题。
+
+### 2026-05-27
+
+- 日志可观测性增强,  补充异常日志文件能力 `~/.crane/logs/crane.log`。
+- 日志滚动与清理：新增按日期滚动（`crane-YYYY-MM-DD.log`）与自动清理策略，默认保留最近 7 天。
+- 配置项新增：`options.log_retention_days`（`>=1`，默认 `7`），用于控制日志保留天数。
+  
+### 2026-05-25 
+
+- 构建发布流程优化
+- SSH 交互认证防护增强
+- 优化K8S 技能
 
 ## 产品定位
 
@@ -50,6 +59,7 @@ Crane 是一个面向 DevOps / SRE 场景的本地交互式 AI Agent。它的核
 - K8s 上下文读取与切换（会话级上下文记忆）。
 - 自动生成集群分析报告（YAML）并作为提示词上下文参考。
 - 内置 `k8s-ops-expert` 技能，包含“先分析再提问”等强制流程片段（FORCE）。
+- AWS 资源管理技能（待完善）。
 
 
 ### 6) 交互体验
@@ -74,11 +84,16 @@ crane
 
 ## 使用方法（推荐流程）
 
-1. 启动后先配置模型认证（API Key 或 OAuth）。
-2. 新建会话并直接描述期望目的（如“排查某 namespace 的 CrashLoopBackOff”）。
-3. Crane 会调用工具收集事实，必要时弹出权限审批。
-4. 对涉及写文件任务，优先写入当前会话目录 `session-<short>`；越界写入需你确认。
-5. 通过命令面板切换模型、语言、K8s context等。
+1. 在本地配置好 kubeconfig 等相关认证信息，确保 `kubectl` 能正常访问目标集群。
+2. 在本地配置好 aws creadentials，确保 `aws cli` 能正常访问目标云资源。
+3. 将 Crane 可执行文件放在全局环境变量路径中。
+4. 在终端中进入工作目录，运行 `crane` 启动应用。
+5. 启动后先配置模型认证（API Key 或 OAuth），快捷建 Alt+m。
+6. 在输入框直接描述期望目的（如“排查某 namespace 的 CrashLoopBackOff”）。
+   
+### 注意：
+* Crane 不会直接处理或存储 Kubernetes 认证信息，而是依赖用户预先配置好的环境来执行相关命令。
+* 对涉及写文件任务，优先写入当前工作目录的会话目录 `session-<short>`；越界读、写文件需你确认。
 
 ## 常用快捷键
 
@@ -101,7 +116,6 @@ crane
 - 全局配置：`~/.crane/config.json`
 - 工作区配置：`<workdir>/.crane/config.json`
 - 消息存储：`~/.crane/messages.json`
-- 集群分析报告：`<workdir>/.crane/<cluster>.yaml`
 
 ## 适用场景示例
 
@@ -119,4 +133,3 @@ crane
 如有任何问题或建议，欢迎通过以下方式联系我们：
 
 - 邮箱：tofupi@163.com
-- weixin：tofupi
