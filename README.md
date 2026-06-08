@@ -2,6 +2,8 @@
 
 Crane 是一个面向 DevOps / SRE 场景的本地交互式 AI OPS Agent。它的核心定位不是“通用聊天”，而是把自然语言请求转成可执行的本地运维动作，并把过程、工具输出、权限审批和会话状态可视化。
 
+![](./media/ui.png)
+
 > ⚠️ 重要说明
 > * 由于本项目还在功能开发阶段，所以**现阶段仅提供编译后的二进制程序，源代码暂未公开**，不属于开源软件。
 > * 我们计划在 Star 达到一定数量后正式开放源代码，并切换为开源协议。
@@ -52,6 +54,33 @@ crane
 - 对执行高风险操作（删除、迁移、全局改动）前要有明确确认与回滚方案。
 - 定期清理本地消息/配置中的历史敏感信息。
 
+
+## Model 支持
+
+> 此处列举了当前已适配的模型类型，用户可根据需要选择配置使用。我们也在持续增加新的模型适配，欢迎关注更新日志。
+
+| Model Type | 供应商 | 验证状态 | 描述 |
+|---------|------|------|------|
+| 💬 Claude | Anthropic | - |  |
+| 🤖 GPT | OpenAI |-  |  |
+| 🌐 Gemini | Google | -  |  |
+| 🔧 Grok | xAI | -  |  |
+| 💬 GLM | zAI | -  |  |
+| 🔄 Kimi | Kimi | -  |  |
+| 🌐 Doubao | volcengine-ark | 通过 | 先随便选默volcengine-ark 的认模型登录，然后再选择实际开通的模型。 |
+| 🎯 Copilot | GitHub | 通过 | github 账号| 
+| 🎯 MiniMax | MiniMax | - |
+| 🎯 All in one | Synthetic | - |
+| 🎯 All in one | Aihubmix | - |
+| 🎯 All in one | Avian | - |
+| 🎯 Azure OpenAI | Azure | - |
+| 🎯 AWS Claude | AWS | - |
+| 🎯 Hugging Face | Hugging Face | - |
+| 🎯 OpenRouter | OpenRouter | - |
+
+> ⚠️ 重要说明
+> 不同厂商提供的认证方式可能不同，通常为支持 API Key 和 OAuth 两种认证方式，用户可根据需要选择配置。
+> 用户在不同厂商申请的 API Key 可能具有不同的权限范围，用户需根据实际权限选择对应的模型。大部分厂商提供的模型完整能力均需要企业级权限。
 
 ## 使用许可与高危免责
 本程序为免费非开源软件，使用规则如下：
