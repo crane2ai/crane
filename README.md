@@ -62,25 +62,52 @@ crane
 | Model Type | 供应商 | 验证状态 | 描述 |
 |---------|------|------|------|
 | 💬 Claude | Anthropic | - |  |
-| 🤖 GPT | OpenAI |-  |  |
+| 🤖 GPT | OpenAI | 已验证 |  |
 | 🌐 Gemini | Google | -  |  |
 | 🔧 Grok | xAI | -  |  |
 | 💬 GLM | zAI | -  |  |
 | 🔄 Kimi | Kimi | -  |  |
-| 🌐 Doubao | volcengine-ark | 通过 | 先随便选默volcengine-ark 的认模型登录，然后再选择实际开通的模型。 |
-| 🎯 Copilot | GitHub | 通过 | github 账号| 
+| 🌐 Doubao | volcengine-ark | 已验证 | api key |
+| 🎯 Copilot | GitHub | 已验证 | github 账号| 
 | 🎯 MiniMax | MiniMax | - |
 | 🎯 All in one | Synthetic | - |
 | 🎯 All in one | Aihubmix | - |
 | 🎯 All in one | Avian | - |
 | 🎯 Azure OpenAI | Azure | - |
-| 🎯 AWS Claude | AWS | - |
+| 🎯 AWS Bedrock | AWS | - |
 | 🎯 Hugging Face | Hugging Face | - |
 | 🎯 OpenRouter | OpenRouter | - |
 
 > ⚠️ 重要说明
 > 不同厂商提供的认证方式可能不同，通常为支持 API Key 和 OAuth 两种认证方式，用户可根据需要选择配置。
 > 用户在不同厂商申请的 API Key 可能具有不同的权限范围，用户需根据实际权限选择对应的模型。大部分厂商提供的模型完整能力均需要企业级权限。
+
+## 常用终端命令
+
+|name|provider|download|description|
+|---|---|---|---|
+| aws cli | AWS | [AWS CLI 官方文档](https://aws.amazon.com/cli/) | AWS 命令行工具，用于与 AWS 服务进行交互和管理。 |
+| awscurl | AWS | [awscurl 官方文档](https://github.com/okigan/awscurl) | AWS 命令行工具，用于与 AWS 服务进行交互和管理。 |
+| az cli | Azure | [Azure CLI 官方文档](https://learn.microsoft.com/cli/azure/install-azure-cli) | Azure 命令行工具，用于与 Azure 服务进行交互和管理。 |
+| gcloud | Google Cloud | [Google Cloud SDK 官方文档](https://cloud.google.com/sdk/docs/install) | Google Cloud 命令行工具，用于与 Google Cloud 服务进行交互和管理。 |
+| oc | OpenShift | [OpenShift CLI 官方文档](https://docs.openshift.com/container-platform/latest/cli_reference/openshift_cli/getting-started-cli.html) | OpenShift 命令行工具，用于与 OpenShift 集群进行交互和管理。 |
+| aliyun cli | 阿里云 | [阿里云 CLI 官方文档](https://www.alibabacloud.com/help/cli) | 阿里云命令行工具，用于与阿里云服务进行交互和管理。 |
+| tencentcloud cli|腾讯云|[腾讯云 CLI 官方文档](https://cloud.tencent.com/product/cli)|腾讯云命令行工具，用于与腾讯云服务进行交互和管理。|
+| huawei cli|华为云|[华为云 CLI 官方文档](https://support.developer.huaweicloud.com/doc/development/resource-tools/zh-cn_topic_0000001295379054-0000001295379054 ) | 华为云命令行工具，用于与华为云服务进行交互和管理。 |
+| kubectl | Kubernetes | [kubectl 官方文档](https://kubernetes.io/zh/docs/tasks/tools/) | Kubernetes 命令行工具，用于与 Kubernetes 集群进行交互和管理。 |
+| helm | Kubernetes | [Helm 官方文档](https://helm.sh/docs/intro/install/) | Kubernetes 包管理工具，用于简化 Kubernetes 应用的部署和管理。 |
+| docker | Docker | [Docker 官方文档](https://docs.docker.com/get-docker/) | Docker 命令行工具，用于容器化应用的构建、运行和管理。 |
+| argocd | Argo CD | [Argo CD 官方文档](https://argo-cd.readthedocs.io/en/stable/getting_started/) | Argo CD 命令行工具，用于管理 Kubernetes 上的 GitOps 部署。 |
+|kustomize| Kubernetes | [Kustomize 官方文档](https://kubectl.docs.kubernetes.io/installation/kustomize/) | Kubernetes 配置管理工具，用于定制化 Kubernetes 资源的生成和管理。 |
+| terraform | HashiCorp | [Terraform 官方文档](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli) | Terraform 命令行工具，用于基础设施即代码（IaC）的编排和管理。 |
+| terraform module | | [tofupi_modules_aws](https://github.com/tofupi163/tofupi_modules_aws) || AWS 相关的 Terraform 模块集合，包含 VPC、ECS、RDS、S3 等常用资源的模块化定义。 |
+| ansible | Ansible | [Ansible 官方文档](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html) | Ansible 命令行工具，用于自动化 IT 基础设施的配置和管理。 |
+|git for windows|Git for Windows|[Git for Windows 官方文档](https://gitforwindows.org/)|适用于 Windows 的 Git 版本控制工具，提供了 Git 命令行功能和图形界面。|
+|python | Python | [Python 官方文档](https://www.python.org/downloads/) | Python 编程语言的命令行工具，用于运行 Python 脚本和管理 Python 环境。 |
+| mysql | MySQL | [MySQL 官方文档](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/) | MySQL 命令行工具，用于与 MySQL 数据库进行交互和管理。 |
+|psql | PostgreSQL | [PostgreSQL 官方文档](https://www.postgresql.org/download/) | PostgreSQL 命令行工具，用于与 PostgreSQL 数据库进行交互和管理。 |
+|mongosh | MongoDB | [MongoDB 官方文档](https://www.mongodb.com/docs/mongodb-shell/) | MongoDB 命令行工具，用于与 MongoDB 数据库进行交互和管理。 |
+
 
 ## 使用许可与高危免责
 本程序为免费非开源软件，使用规则如下：
@@ -94,6 +121,7 @@ crane
 
 详细条款见仓库内 [LICENSE](./LICENSE) 文件。
 
+
 ## 版本更新
 
 ### 2026-06-07
@@ -104,7 +132,7 @@ crane
 - 诊断能力新增：引入 `diagnostics` 工具与结果弹窗，支持 JSON/YAML/Shell/PowerShell/Python/HCL/Dockerfile 语法诊断并可定位到文件行列。
 - 会话与文件历史增强：新增文件事件订阅与文件版本历史记录能力，写入/编辑与部分命令写文件可追踪。
 - Chat/UI 体验优化：聊天区纵向滚动条、Bash 工具“命令/结果”分离展示、侧边栏文件区滚动与焦点切换、提示历史合并去重。
-- 支持 火山引擎 Ark 模型适配，由于模型权限限制，需用户自行申请 API Key 并配置（快捷键 Alt+m，模型列表选择 volcengine-ark）。先随便选默volcengine-ark 的认模型登录，然后再选择实际开通的模型。
+- 支持 火山引擎 Ark 模型适配，由于模型权限限制，需用户自行申请 API Key 并配置（快捷键 Alt+m，模型列表选择 volcengine-ark）。
 
 ### 2026-06-02
 
