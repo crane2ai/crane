@@ -2,6 +2,8 @@
 
 Crane 是一个面向 DevOps / SRE 场景的本地交互式 AI OPS Agent。它的核心定位不是“通用聊天”，而是把自然语言请求转成可执行的本地运维动作，并把过程、工具输出、权限审批和会话状态可视化。
 
+Crane 的核心价值，并非仅完成指令理解与执行。面对复杂环境，它可结合现场状态动态适配、自动排错，全程流程透明、操作可控，稳步达成目标。
+
 ![](./media/ui.png)
 
 > ⚠️ 重要说明
@@ -226,19 +228,18 @@ crane
 
 - `ctrl+p`：打开 Commands
 - `ctrl+n`：新会话
-- `ctrl+s`：Sessions 列表
-- `alt+m`：切换 Models
+- `ctrl+s`：Sessions
+- `alt+m`： 切换 Models
+- `alt+i`：添加附件/图片（在会话中）
 - `ctrl+e`：切换执行模式（Execution Mode）
 - `ctrl+l`：输出语言切换
 - `ctrl+k`：查看并切换 K8s Contexts
 - `ctrl+h` / `ctrl+g`：About
-- `ctrl+z`：挂起（suspend）
 - `ctrl+q`：退出
 - `ctrl+c`：输入框内容复制到剪贴板（仅支持全部内容复制）
-- `ctrl+f`：添加附件/图片（在会话中）
+- `ctrl+f`：搜索当前会话消息；搜索模式下输入关键词实时高亮，`enter` 下一个匹配，`shift+enter` / `ctrl+j` 上一个匹配，`esc` 退出
 - `ctrl+o`：外部编辑器（需环境变量 `EDITOR`）
 - `ctrl+r`：进入附件删除模式（用于删除如 `paste_1.png` 这类附件）
-- `esc`：退出附件删除模式
 
 ## 配置与数据位置
 
