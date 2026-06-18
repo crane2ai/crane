@@ -107,6 +107,7 @@ crane
 |git for windows|Git for Windows|[Git for Windows 官方文档](https://gitforwindows.org/)|适用于 Windows 的 Git 版本控制工具，提供了 Git 命令行功能和图形界面。|
 |python | Python | [Python 官方文档](https://www.python.org/downloads/) | Python 编程语言的命令行工具，用于运行 Python 脚本和管理 Python 环境。 |
 | mysql | MySQL | [MySQL 官方文档](https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/) | MySQL 命令行工具，用于与 MySQL 数据库进行交互和管理。 |
+| mycli | MyCLI | [MyCLI 官方文档](https://www.mycli.net/) | MyCLI 基于python 的一个命令行工具 for MySQL, MariaDB, and Percona ，优点是安装方便 |
 |psql | PostgreSQL | [PostgreSQL 官方文档](https://www.postgresql.org/download/) | PostgreSQL 命令行工具，用于与 PostgreSQL 数据库进行交互和管理。 |
 |mongosh | MongoDB | [MongoDB 官方文档](https://www.mongodb.com/docs/mongodb-shell/) | MongoDB 命令行工具，用于与 MongoDB 数据库进行交互和管理。 |
 
@@ -125,6 +126,13 @@ crane
 
 
 ## 版本更新
+
+### 2026-06-18
+* 增强文本编辑能力，优化编辑各种DevOps 脚本。
+* TUI 优化支持在输入框快捷键，siadebar滚动条。
+* 增加后台执行任务功能，支持自然语言查看后台任务状态。
+* 增加 todos list 支持，清晰。
+* 增加 输入信息队列支持。
 
 ### 2026-06-07
 
