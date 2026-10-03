@@ -110,7 +110,7 @@ crane
 | mycli | MyCLI | [MyCLI 官方文档](https://www.mycli.net/) | MyCLI 基于python 的一个命令行工具 for MySQL, MariaDB, and Percona ，优点是安装方便 |
 |psql | PostgreSQL | [PostgreSQL 官方文档](https://www.postgresql.org/download/) | PostgreSQL 命令行工具，用于与 PostgreSQL 数据库进行交互和管理。 |
 |mongosh | MongoDB | [MongoDB 官方文档](https://www.mongodb.com/docs/mongodb-shell/) | MongoDB 命令行工具，用于与 MongoDB 数据库进行交互和管理。 |
-
+| putty | PuTTY | [PuTTY 官方文档](https://www.putty.org/) | PuTTY 是一个免费的 SSH 和 Telnet 客户端，用于远程访问和管理服务器。 |
 
 ## 使用许可与高危免责
 本程序为免费非开源软件，使用规则如下：
@@ -126,6 +126,13 @@ crane
 
 
 ## 版本更新
+
+### 2026-06-23
+* 支持多开
+* 大文件优化 
+* 修复总结文本超过90s 的问题，改为 5分钟 
+* 修复命令执行失败后，流程终止的问题 
+* 报错优化
 
 ### 2026-06-18
 * 增强文本编辑能力，优化编辑各种DevOps 脚本。
